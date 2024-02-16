@@ -1,0 +1,54 @@
+.dark-mode {
+    background-color: darken($grisOscuro, 10);
+
+    p {
+        color: $blanco;
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $gris;
+    }
+
+    .card {
+        background-color: $grisOscuro;
+        border: 1px solid $grisOscuro;
+    }
+
+    li {
+        img {
+            filter: invert(100%);
+        }
+    }
+
+    .precio {
+        color: $verde;
+    }
+
+    .formulario {
+
+        fieldset {
+            border: 1px solid lighten($grisOscuro, 20);
+        }
+
+        legend,
+        label {
+            color: $gris;
+        }
+
+        p {
+            color: $blanco;
+        }
+
+        select,
+        textarea,
+        input:not([type="submit"]) {
+            background-color: $grisOscuro;
+            border: 1px solid $grisOscuro;
+            color: $blanco;
+        }
+    }
+}

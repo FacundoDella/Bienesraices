@@ -1,0 +1,18 @@
+.iconos-nosotros {
+    @include tablet {
+        @include grid(3, 2rem)
+    }
+}
+
+.icono {
+    text-align: center;
+
+    img {
+        height: 10rem;
+        align-items: center;
+    }
+
+    h3 {
+        text-transform: uppercase;
+    }
+}

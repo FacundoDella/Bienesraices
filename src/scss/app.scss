@@ -1,0 +1,24 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+@import 'base/botones';
+@import 'base/dark-mode';
+
+
+/*UI*/
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navegacion';
+@import 'layout/iconos';
+@import 'layout/card';
+@import 'layout/contacto';
+@import 'layout/inferior';
+@import 'layout/testimoniales';
+@import 'layout/nosotros';
+@import 'layout/formulario';
+
+/* Paginas internas*/
+@import 'internas/admin';

@@ -1,0 +1,34 @@
+.nosotros {
+    margin-bottom: 4rem;
+}
+
+.nosotros-contenido {
+    @include tablet {
+        @include grid(2, 2rem)
+    }
+}
+
+
+
+.nosotros-texto {
+
+    margin-top: 4rem;
+
+    @include tablet {
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    span {
+        font-weight: 900;
+        display: block;
+        padding-bottom: 4rem;
+        margin-top: 2rem;
+        margin: 0;
+    }
+}

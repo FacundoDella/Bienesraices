@@ -1,0 +1,1 @@
+{"version":3,"sources":["internas/admin.scss","internas/admin.css"],"names":[],"mappings":"AACI,cACI,oBCAR","file":"admin.css","sourcesContent":[".alerta {\r\n    &.error {\r\n        background-color: red;\r\n    }\r\n}\r\n\r\n",".alerta.error {\n  background-color: red;\n}"]}

@@ -1,0 +1,65 @@
+@include tablet {
+    .contenedor-card {
+        @include grid(3, 2rem)
+    }
+}
+
+.card {
+    background-color: lighten($gris, 8);
+    border: 1px solid lighten($grisOscuro, 60);
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
+.iconos-caracteristicas {
+    @include grid(3, 2rem);
+    padding: 0 1rem;
+
+    li {
+        display: flex;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        img {
+            margin-right: 1rem;
+            flex: 0 0.3 5rem;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+
+.contenido-card {
+    text-align: center;
+    padding-top: 2rem;
+
+
+    h3 {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+
+}
+
+.precio {
+    text-align: left;
+    color: $verde;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+
+
+.iconos-reducido {
+    max-width: 40rem;
+
+}
