@@ -163,11 +163,18 @@ class ActiveRecord
     public static function find($id)
     {
         $query = "SELECT * FROM " . static::$tabla .  " WHERE id = $id";
-
         $resultado = self::consultarSQL($query);
-
         return array_shift($resultado);
     }
+
+    // Obtiene determinado numero de registros
+    public static function get($cantidad)
+    {
+        $query = "SELECT * FROM " . static::$tabla . " LIMIT " . $cantidad;
+        $resultado = self::consultarSQL($query);
+        return $resultado;
+    }
+
 
     // Sincroniza el objeto en memoria con los cambios realizados por el usuario
     public function sincronizar($args = [])
