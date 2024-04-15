@@ -2,9 +2,9 @@
 
 
 
-if (!$_SESSION) {
-    session_start();
-}
+// if (!$_SESSION) {
+//     session_start();
+// }
 
 $auth = $_SESSION['login'] ?? false;
 

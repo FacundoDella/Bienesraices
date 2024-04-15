@@ -1,8 +1,10 @@
 <?php
 
 use App\Propiedad;
+use App\Vendedor;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+
 
 require '../../includes/app.php';
 
@@ -19,10 +21,8 @@ if (!$id) {
 // Consulta para las propiedades  
 $propiedad = Propiedad::find($id);
 
-// Consultar para obtener los vendedores 
-$consulta = "SELECT * FROM vendedores";
-$resultado = mysqli_query($db, $consulta);
-
+// Consulta para obtener todos los vendedores
+$vendedores = Vendedor::all();
 
 // Arreglo de errores
 $errores = Propiedad::getErrores(); // Array de errores vacio
@@ -51,10 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Revisar que el array de errores este vacio
     if (empty($errores)) {
-
-        // Almacenar la imagen 
-        $image->save(CARPETA_IMAGENES . $nombreImagen);
-
+        if ($_FILES['propiedad']['tmp_name']['imagen']) {
+            // Almacenar la imagen 
+            $image->save(CARPETA_IMAGENES . $nombreImagen);
+        }
         $propiedad->guardar();
     }
 }

@@ -8,7 +8,7 @@
     <input type="text" id="precio" name="propiedad[precio]" placeholder="Precio Propiedad" value="<?php echo s($propiedad->precio); ?>">
 
     <label for="imagen">Imagen:</label>
-    <input type="file" id="imagen accept="image/jpeg, image/png" name="propiedad[imagen]">
+    <input type="file" id="imagen accept=" image/jpeg, image/png" name="propiedad[imagen]">
 
     <?php if ($propiedad->imagen) { ?>
         <img src="../../imagenes/<?php echo $propiedad->imagen ?>" class="imagen-small">
@@ -32,6 +32,13 @@
 </fieldset>
 
 <fieldset>
-    <legend>Vendedor</legend>
-
+    <legend>Vendedores</legend>
+    <label for="vendedor">Vendedor</label>
+    <select name="propiedad[vendedorId]" id="vendedor">
+        <option selected value="">-- Seleccione -- </option>
+        <?php foreach ($vendedores as $vendedor) { ?>
+            <option <?php echo $propiedad->vendedorId === $vendedor->id ? 'selected' : '' ?> value="<?php echo s($vendedor->id) ?>">
+                <?php echo s($vendedor->nombre) . " " . s($vendedor->apellido) ?>
+            </option>
+        <?php } ?>
 </fieldset>
